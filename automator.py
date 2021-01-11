@@ -9,15 +9,11 @@ def getData():
     f.write(userName)
     f.close()
 
-    saveDirectory = raw_input("Enter where you want to save your files (Press 1 for Default (Desktop) or your prefered directory starting from the home folder (Desktop/subfolder; Documents/subfolder)): ")
+    saveDirectory = raw_input("Enter the Directory where you want to save your files (Desktop/subfolder; Documents/subfolder)): ")
 
     f = open("./saveDirectory.txt", "w")
-    if saveDirectory == 1: 
-        f.write('Desktop')
-        f.close
-    else:   
-        f.write(saveDirectory)
-        f.close
+    f.write(saveDirectory)
+    f.close
 
     choice2 = input("Press 1 to Exit, or 2 to Load the Program: ")
 
