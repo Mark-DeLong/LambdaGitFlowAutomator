@@ -5,13 +5,13 @@ import os
 def getData():
     userName = raw_input("Enter your github username: ")
 
-    f = open("./userData.txt", "w")
+    f = open("userData.txt", "w")
     f.write(userName)
     f.close()
 
     saveDirectory = raw_input("Enter the Directory where you want to save your files (Desktop/subfolder; Documents/subfolder)): ")
 
-    f = open("./saveDirectory.txt", "w")
+    f = open("saveDirectory.txt", "w")
     f.write(saveDirectory)
     f.close
 
@@ -29,11 +29,11 @@ choice1 = input("Press 1 to set your data, or 2 to Load the Program: ")
 if choice1 == 1:
     getData()
 else:
-    f = open("./userData.txt", "r")
+    f = open("userData.txt", "r")
     userName = f.read()
     f.close()
 
-    f = open("./saveDirectory.txt", "r")
+    f = open("saveDirectory.txt", "r")
     saveDirectory = f.read()
     f.close()
 
